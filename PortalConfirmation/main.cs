@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using VRC;
 
-[assembly: MelonModInfo(typeof(PortalConfirmation.Main), "Portal Confirmation", "1.0.0", "404#0004", null)]
+[assembly: MelonModInfo(typeof(PortalConfirmation.Main), "Portal Confirmation", "1.0.0", "404#0004", "https://github.com/l-404-l/Portal-Confirmation/releases")] //Pepega Knah Assembly XD 
 [assembly: MelonModGame("VRChat", "VRChat")]
 
 namespace PortalConfirmation
@@ -34,14 +34,14 @@ namespace PortalConfirmation
         public static void EnterConfirm(IntPtr instance)
         {
             if (IntPtr.Zero != instance)
-            {
+            { 
                 var portal = new PortalInternal(instance);
                 var dropper = PlayerManager.Method_Public_Static_Player_Int32_0(portal.field_Internal_Int32_0);
                 VRCUiPopupManager.field_Private_Static_VRCUiPopupManager_0.
                     Method_Public_Void_String_String_String_Action_Action_1_VRCUiPopup_0("Portal Confirmation", "Would you like to enter this world? \n" +
                     $"Name: {portal.field_Private_ApiWorld_0.name}\n" +
                     $"Author: {portal.field_Private_ApiWorld_0.authorName}\n" +
-                    $"Player: {(dropper != null ? dropper.field_Private_APIUser_0.displayName : "Null")}", "Yes", new Action(() => {
+                    $"Player: {(dropper != null ? dropper.field_Private_APIUser_0.displayName : "No Player")}", "Yes", new Action(() => {
                         OldEnter(instance); VRCUiPopupManager.field_Private_Static_VRCUiPopupManager_0.Method_Public_Void_2(); 
                     }));
             }

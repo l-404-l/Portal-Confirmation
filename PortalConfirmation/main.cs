@@ -15,7 +15,7 @@ namespace PortalConfirmation
 {
     public class Main : MelonMod
     {
-        public static MethodInfo HookM = typeof(Imports).GetMethod("Hook", BindingFlags.Public | BindingFlags.Static);
+        public static MethodInfo HookM = typeof(Imports).GetMethod("Hook", Harmony.AccessTools.all);
         public delegate void EnterFix(IntPtr instance);
         public static EnterFix OldEnter;
         public static void HookMethod(IntPtr OldMethod, IntPtr NewMethod)

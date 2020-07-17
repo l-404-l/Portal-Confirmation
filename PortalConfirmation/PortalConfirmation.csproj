@@ -70,8 +70,7 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="VRCCore-Standalone">
-      <HintPath>..\..\..\..\steam\steamapps\common\VRChat\MelonLoader3\MelonLoader\Managed\VRCCore-Standalone.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>..\..\..\..\steam\steamapps\common\VRChat\MelonLoader\Managed\VRCCore-Standalone.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
